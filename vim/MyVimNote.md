@@ -7,6 +7,7 @@
     * esc/ctrl+[  enter command mode, ctrl+c breaks visual block and won't trigger InsertLeave autocommand event
     * .           redo previous command
     * u           undo previous change
+    * U           return the whole line to original state
     * ctrl+r      redo previous change
     * :q          quit
     * :q!         quit without saving
