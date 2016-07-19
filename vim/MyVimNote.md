@@ -31,6 +31,7 @@
     * move in line
         * 0         move to start of the line
         * $         move to end of the line
+        * ^         move to beginning of the first word of the line
         * 5|        go to column 5
     * large range movement
         * :5/5G     goto line number 5
@@ -66,11 +67,12 @@
     * #     find previous occurrence of word under cursor
 
 ## Edit (copy & paste & cut & delete)
-    * y[movement] yank (copy) by giving movement
+    * y[number]motion yank (copy) by giving movement
         * yy         copy current line
         * yit        copy in (html) tag
         * yip        copy in entire paragraph
-    * d[movement] delete by giving movement
+    * Y           ...
+    * d[number]motion delete by giving movement
         * de         delete to the end of the word, keep trailing space(s)
         * dw         delete first (partial) word on the right and trailing space(s)
         * diw        delete in the (whole) word
@@ -82,21 +84,22 @@
         * di{        delete inside of {}
         * dt
         * df
+    * c[number]motion change by giving movement
+        * ce         change to the end of the word
+        * ci(        change inside of ()
+    * C           delete from cursor to end of line, and enter INSERT mode
     * o           new line below, and enter INSERT mode
     * O           new line above, and enter INSERT mode
     * a           append at next position, enter INSERT mode
     * A           append at end of line, enter INSERT mode
     * |           move to beginning of line, enter INSERT mode
-    * Y           ...
     * 30i- esc    insert "-" 30 times
     * S           delete current line, and enter INSERT mode
-    * C           delete from cursor to end of line, and enter INSERT mode
     * D           delete from cursor to end of line
     * x           delete character under cursor, like "Delete"
     * X           delete character to the left of cursor, like "Back Space"
     * r           replace character under cursor
     * p           paste copied text after cursor
-    * ci(         change inside of ()
 
 ## Split buffer
     * :vs       vertically split
