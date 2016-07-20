@@ -32,11 +32,12 @@
         * 0         move to start of the line
         * $         move to end of the line
         * ^         move to beginning of the first word of the line
+        * |         move to beginning of line
         * 5|        go to column 5
     * large range movement
-        * :5/5G     goto line number 5
         * gg        goto beginning of file
-        * G         goto end of file
+        * G         goto beginning of last line of file
+        * :5/5G     goto line number 5
         * ctrl+u    page up (default: half page)
         * ctrl+d    page down (default: half page)
         * ctrl+f    page forward full screen
@@ -62,23 +63,23 @@
         * 3fq    find 3rd 'q'
         * ;      repeat last f
         * ,      repeat last F
-    * %     jump to matching parenthesis
-    * *     find next occurrence of word under cursor
-    * #     find previous occurrence of word under cursor
+    * % jump to matching parenthesis
+    * * find next occurrence of word under cursor
+    * # find previous occurrence of word under cursor
 
 ## Edit (copy & paste & cut & delete)
     * y[number]motion yank (copy) by giving movement
-        * yy         copy current line
+        * yy == Y    copy current line
         * yit        copy in (html) tag
         * yip        copy in entire paragraph
-    * Y           ...
     * d[number]motion delete by giving movement
         * de         delete to the end of the word, keep trailing space(s)
-        * dw         delete first (partial) word on the right and trailing space(s)
+        * dw         delete word from cursor, including trailing space(s)
         * diw        delete in the (whole) word
         * d2e        delete to the end of 2 words, keep trailing space(s)
         * d2w        delete 2 words on the right and trailing space(s)
-        * dd == d$   delete current line
+        * dd         delete current line
+        * d$ == D    delete from cursor to end of line
         * di(        delete inside of ()
         * di[        delete inside of []
         * di{        delete inside of {}
@@ -87,15 +88,20 @@
     * c[number]motion change by giving movement
         * ce         change to the end of the word
         * ci(        change inside of ()
-    * C           delete from cursor to end of line, and enter INSERT mode
+        * c$ == C    delete from cursor to end of line, and enter INSERT mode
+    * :s/old/new substitute "new" for "old"
+        * :s/old/new/g      substitute globally in the whole line
+        * :1,3s/old/new/g   substitute in line 1 to line 3
+        * :%s/old/new/g     to change every occurrence in the whole file.
+        * :%s/old/new/gc    to find every occurrence in the whole file, with a
+     			    prompt whether to substitute or not.
     * o           new line below, and enter INSERT mode
     * O           new line above, and enter INSERT mode
     * a           append at next position, enter INSERT mode
     * A           append at end of line, enter INSERT mode
-    * |           move to beginning of line, enter INSERT mode
     * 30i- esc    insert "-" 30 times
-    * S           delete current line, and enter INSERT mode
-    * D           delete from cursor to end of line
+    * S           ^ + c$
+    * s           x + i
     * x           delete character under cursor, like "Delete"
     * X           delete character to the left of cursor, like "Back Space"
     * r           replace character under cursor
