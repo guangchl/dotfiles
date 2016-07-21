@@ -93,8 +93,7 @@
         * :s/old/new/g      substitute globally in the whole line
         * :1,3s/old/new/g   substitute in line 1 to line 3
         * :%s/old/new/g     to change every occurrence in the whole file.
-        * :%s/old/new/gc    to find every occurrence in the whole file, with a
-     			    prompt whether to substitute or not.
+        * :%s/old/new/gc    to find every occurrence in the whole file, with a prompt whether to substitute or not.
     * o           new line below, and enter INSERT mode
     * O           new line above, and enter INSERT mode
     * a           append at next position, enter INSERT mode
