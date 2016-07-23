@@ -2,20 +2,24 @@
 >There are 3 modes, command mode, insert mode and visual mode. Most the time, be in command mode.
 
 ## Basic
-    * :help       help
-    * i/I         enter INSERT mode
-    * esc/ctrl+[  enter command mode, ctrl+c breaks visual block and won't trigger InsertLeave autocommand event
-    * .           redo previous command
-    * u           undo previous change
-    * U           return the whole line to original state
-    * ctrl+r      redo previous change
-    * :q          quit
-    * :q!         quit without saving
-    * :w          save
-    * :x          save if there is any change and quit
-    * :wq         save and quit
-    * :wq!        save and quit, force write if file doesn't have write permission
-    * :xa         save if there is any change and quit all files
+    * :help           help
+    * i/I             enter INSERT mode
+    * esc/ctrl+[      enter command mode, ctrl+c breaks visual block and won't trigger InsertLeave autocommand event
+    * .               redo previous command
+    * u               undo previous change
+    * U               return the whole line to original state
+    * ctrl+r          redo previous change
+    * :q              quit
+    * :q!             quit without saving
+    * :w              save
+    * :x              save if there is any change and quit
+    * :wq             save and quit
+    * :wq!            save and quit, force write if file doesn't have write permission
+    * :xa             save if there is any change and quit all files
+    * :!<command>     execute the command
+    * v motion :w abc selecting text to write to file called abc
+    * :r FILENAME     retrieves file FILENAME and puts it below the cursor
+    * :r !ls          reads output of ls command and puts it below the cursor
 
 ## Move Cursor & Scroll
     * basic movement
@@ -57,6 +61,7 @@
     * /abc search "abc" in the file
         * n      find next match
         * N      find previous match
+        * /abc\c search "abc" in the file and ignore case for this search
     * find in same line
         * fo     find next 'o'
         * Fo     find previous 'o'
@@ -94,8 +99,8 @@
         * :1,3s/old/new/g   substitute in line 1 to line 3
         * :%s/old/new/g     to change every occurrence in the whole file.
         * :%s/old/new/gc    to find every occurrence in the whole file, with a prompt whether to substitute or not.
-    * o           new line below, and enter INSERT mode
-    * O           new line above, and enter INSERT mode
+    * o           open new line below, and enter INSERT mode
+    * O           open new line above, and enter INSERT mode
     * a           append at next position, enter INSERT mode
     * A           append at end of line, enter INSERT mode
     * 30i- esc    insert "-" 30 times
@@ -104,6 +109,7 @@
     * x           delete character under cursor, like "Delete"
     * X           delete character to the left of cursor, like "Back Space"
     * r           replace character under cursor
+    * R           replace multiple characters from cursor, press <ESC> to exit replace mode
     * p           paste copied text after cursor
 
 ## Split buffer
@@ -113,6 +119,14 @@
         * h/j/k/l   left, down, up, right
         * H/J/K/L   left most, down most, up most, right most
         * =         balance the windows size even
+
+## Set Options
+    * :set xxx     sets the option "xxx"
+        * :set ic/ignorecase  ignore upper/lower case when searching
+        * :set is/incsearch   show partial matches for a search phrase
+        * :set hls/hlsearch   highlight all matching phrases
+    * :set noxxx   prepend "no" to switches the option off
+        * :set noic           turn off the ignore case option
 
 Tip: I use [DILLINGER](http://dillinger.io/) both to create the initial version of this markdown file, and to modify this file sometimes afterwards.
 
