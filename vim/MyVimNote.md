@@ -2,7 +2,7 @@
 >There are 3 modes, command mode, insert mode and visual mode. Most the time, be in command mode.
 
 ## Basic
-    * :help           help
+    * :help/<F1>      help
     * i/I             enter INSERT mode
     * esc/ctrl+[      enter command mode, ctrl+c breaks visual block and won't trigger InsertLeave autocommand event
     * .               redo previous command
@@ -20,6 +20,10 @@
     * v motion :w abc selecting text to write to file called abc
     * :r FILENAME     retrieves file FILENAME and puts it below the cursor
     * :r !ls          reads output of ls command and puts it below the cursor
+    * :e/:edit abc    edit file "abc"
+    * Completion
+        * <TAB>       complete with next possible match
+        * CTRL-D      show a list of commands that could be a match
 
 ## Move Cursor & Scroll
     * basic movement
