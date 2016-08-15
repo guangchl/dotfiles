@@ -1,4 +1,4 @@
-# My VIM Note
+# My VIM Note & Cheat Sheet
 >There are 3 modes, command mode, insert mode and visual mode. Most the time, be in command mode.
 
 ## Basic
