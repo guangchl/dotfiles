@@ -17,13 +17,15 @@
     * :wq!            save and quit, force write if file doesn't have write permission
     * :xa             save if there is any change and quit all files
     * :!<command>     execute the command
-    * v motion :w abc selecting text to write to file called abc
     * :r FILENAME     retrieves file FILENAME and puts it below the cursor
     * :r !ls          reads output of ls command and puts it below the cursor
     * :e/:edit abc    edit file "abc"
     * Completion
         * <TAB>       complete with next possible match
         * CTRL-D      show a list of commands that could be a match
+    * :make  runs the make command and captures the output if you got a Makefile
+        * cn          go to the location of the next error even if it is in another file
+        * cc          see the current error message again
 
 ## Move Cursor & Scroll
     * basic movement
@@ -103,6 +105,11 @@
         * :1,3s/old/new/g   substitute in line 1 to line 3
         * :%s/old/new/g     to change every occurrence in the whole file.
         * :%s/old/new/gc    to find every occurrence in the whole file, with a prompt whether to substitute or not.
+    * v  enter visual mode
+        * v motion :w abc  selecting text to write to file called abc
+        * v                select by character
+        * ctrl+v           select as a block
+        * V                select lines
     * o           open new line below, and enter INSERT mode
     * O           open new line above, and enter INSERT mode
     * a           append at next position, enter INSERT mode
@@ -117,22 +124,29 @@
     * p           paste copied text after cursor
 
 ## Split buffer
-    * :vs       vertically split
-    * :split    horizontally split
+    * :vs [file]      vertically split
+    * :split [file]   horizontally split
     * ctrl+w    switch between open files
-        * h/j/k/l   left, down, up, right
-        * H/J/K/L   left most, down most, up most, right most
-        * =         balance the windows size even
+        * h/j/k/l     left, down, up, right
+        * H/J/K/L     left most, down most, up most, right most
+        * =           balance the windows size even
 
 ## Set Options
-    * :set xxx     sets the option "xxx"
+    * :set xxx  sets the option "xxx"
         * :set ic/ignorecase  ignore upper/lower case when searching
         * :set is/incsearch   show partial matches for a search phrase
         * :set hls/hlsearch   highlight all matching phrases
+        * :set cindent        turns on C style indentation
     * :set noxxx   prepend "no" to switches the option off
         * :set noic           turn off the ignore case option
+    * Abbreviation
+        * :ab/:abbreviate teh the  whenever you type the word 'teh', it will be replaced with 'the'
+        * :una/:unabbreviate       remove 'teh' from the list of abbreviations
+        * :abc/:abclear            remove all abbreviations
+    * :set tw/textwidth=80    set the text width for automatic word wrapping
+    * :set tw=0               stop automatic wrapping, unset textwidth
 
-Tip: I use [DILLINGER](http://dillinger.io/) both to create the initial version of this markdown file, and to modify this file sometimes afterwards.
+Tip: I use [DILLINGER] both to create the initial version of this markdown file, and to modify this file sometimes afterwards.
 
 [//]: # (Reference links used in the body of this note, which were stripped out by markdown processor. All comments won't be seen after rendering. SO post for comments in markdown - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax)
 
