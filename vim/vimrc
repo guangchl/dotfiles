@@ -24,11 +24,11 @@ if has("autocmd")
   au VimLeave * silent execute '!echo -ne "\e[ q"' | redraw!
 endif
 
-" Define some nice abbreviations:
+""" Define some nice abbreviations:
 ab #d #define
 ab #i #include
 
-" Converting tabs to spaces
+""" Converting tabs to spaces
 set tabstop=4 shiftwidth=4 expandtab  " oneliner as the 3 lines below
 "set expandtab     " insert space characters whenever the tab key is pressed
 "set tabstop=4     " set number of space when typing tab
