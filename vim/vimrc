@@ -1,2 +1,23 @@
+" line number
 set number
 set relativenumber
+
+""" insert mode
+" highlight the cursor line, default is underline
+:autocmd InsertEnter,InsertLeave * set cul!
+" the following 2 lines are same as the line above
+":autocmd InsertEnter * set cul
+":autocmd InsertLeave * set nocul
+" change the default highlight from underline to background color
+hi CursorLine cterm=NONE ctermbg=black
+" change the cursor shape in insert mode
+if has("autocmd")
+  au VimEnter,InsertLeave * silent execute '!echo -ne "\e[1 q"' | redraw!
+  au InsertEnter,InsertChange *
+    \ if v:insertmode == 'i' | 
+    \   silent execute '!echo -ne "\e[5 q"' | redraw! |
+    \ elseif v:insertmode == 'r' |
+    \   silent execute '!echo -ne "\e[3 q"' | redraw! |
+    \ endif
+  au VimLeave * silent execute '!echo -ne "\e[ q"' | redraw!
+endif
