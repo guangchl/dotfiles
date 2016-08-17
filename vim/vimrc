@@ -1,0 +1,36 @@
+""" Turn on syntax highlighting
+syntax on
+
+""" Line number
+set number
+set relativenumber
+
+""" Insert mode
+" highlight the cursor line, default is underline
+:autocmd InsertEnter,InsertLeave * set cul!  " oneliner as the 2 line below
+":autocmd InsertEnter * set cul
+":autocmd InsertLeave * set nocul
+" change the default highlight from underline to background color
+hi CursorLine cterm=NONE ctermbg=black
+" change the cursor shape in insert mode (for gnome-terminal version >= 3.16)
+if has("autocmd")
+  au VimEnter,InsertLeave * silent execute '!echo -ne "\e[1 q"' | redraw!
+  au InsertEnter,InsertChange *
+    \ if v:insertmode == 'i' | 
+    \   silent execute '!echo -ne "\e[5 q"' | redraw! |
+    \ elseif v:insertmode == 'r' |
+    \   silent execute '!echo -ne "\e[3 q"' | redraw! |
+    \ endif
+  au VimLeave * silent execute '!echo -ne "\e[ q"' | redraw!
+endif
+
+" Define some nice abbreviations:
+ab #d #define
+ab #i #include
+
+" Converting tabs to spaces
+set tabstop=4 shiftwidth=4 expandtab  " oneliner as the 3 lines below
+"set expandtab     " insert space characters whenever the tab key is pressed
+"set tabstop=4     " set number of space when typing tab
+"set shiftwidth=4  " change the number of space characters inserted for indentation
+"retab             " change all the existing tab characters to match the current tab settings
