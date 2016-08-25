@@ -1,0 +1,11 @@
+[user]
+	name = Guangcheng Lu
+	email = ethanlugc@gmail.com
+[core]
+	editor = vim
+[color]
+	ui = true
+	branch = true
+	diff = true
+	status = true
+    

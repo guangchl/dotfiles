@@ -1,9 +1,11 @@
 """ Turn on syntax highlighting
 syntax on
 
+
 """ Line number (hybrid mode from Vim version 7.4)
 set relativenumber
 set number
+
 
 """ Insert mode
 " highlight the cursor line, default is underline
@@ -24,9 +26,11 @@ if has("autocmd")
   au VimLeave * silent execute '!echo -ne "\e[ q"' | redraw!
 endif
 
+
 """ Define some nice abbreviations:
 ab #d #define
 ab #i #include
+
 
 """ Converting tabs to spaces
 set tabstop=4 shiftwidth=4 expandtab  " oneliner as the 3 lines below
