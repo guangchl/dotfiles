@@ -1,9 +1,9 @@
 """ Turn on syntax highlighting
 syntax on
 
-""" Line number
-set number
+""" Line number (hybrid mode from Vim version 7.4)
 set relativenumber
+set number
 
 """ Insert mode
 " highlight the cursor line, default is underline
