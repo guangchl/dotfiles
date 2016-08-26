@@ -27,6 +27,11 @@ if has("autocmd")
 endif
 
 
+""" Fix Unix-based system backspace problem
+set backspace=2 " make backspace work like most other apps, alternative to the line below
+"set backspace=indent,eol,start
+
+
 """ Define some nice abbreviations:
 ab #d #define
 ab #i #include
@@ -38,3 +43,8 @@ set tabstop=4 shiftwidth=4 expandtab  " oneliner as the 3 lines below
 "set tabstop=4     " set number of space when typing tab
 "set shiftwidth=4  " change the number of space characters inserted for indentation
 "retab             " change all the existing tab characters to match the current tab settings
+
+
+""" Start vim in utf-8 encoding mode
+set encoding=utf-8  " The encoding displayed.
+set fileencoding=utf-8  " The encoding written to file.
