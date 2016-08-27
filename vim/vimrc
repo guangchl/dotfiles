@@ -48,3 +48,9 @@ set tabstop=4 shiftwidth=4 expandtab  " oneliner as the 3 lines below
 """ Start vim in utf-8 encoding mode
 set encoding=utf-8  " The encoding displayed.
 set fileencoding=utf-8  " The encoding written to file.
+
+
+""" Searching
+set hlsearch " highlight all search matches
+" press return to temporarily get out of the highlighted search
+nnoremap <CR> :nohlsearch<CR>

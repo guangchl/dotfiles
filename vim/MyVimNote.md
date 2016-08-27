@@ -64,6 +64,7 @@
         * zb        move current line to the bottom of the screen
 
 ## Search
+    * *    search the word under the cursor
     * /abc search "abc" in the file
         * n      find next match
         * N      find previous match
