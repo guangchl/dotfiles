@@ -26,6 +26,7 @@
     * :make  runs the make command and captures the output if you got a Makefile
         * cn          go to the location of the next error even if it is in another file
         * cc          see the current error message again
+    * zf<motion>      fold lines/codes, like zf% to fold things in parenthesis
 
 ## Move Cursor & Scroll
     * basic movement
