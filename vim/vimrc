@@ -106,7 +106,8 @@ call plug#begin('~/.vim/plugged')
 "Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 
 " On-demand loading
-"Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+" NERDTree
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 "Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
 
 " Using a non-master branch
@@ -114,6 +115,12 @@ call plug#begin('~/.vim/plugged')
 
 " EasyMotion
 Plug 'easymotion/vim-easymotion'
+
+" surround.vim
+Plug 'tpope/vim-surround'
+
+" tcomment
+Plug 'tomtom/tcomment_vim'
 
 " Using a tagged release; wildcard allowed (requires git 1.9.2 or above)
 Plug 'fatih/vim-go' ", { 'tag': '*' }
