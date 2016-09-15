@@ -123,11 +123,22 @@ Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 " EasyMotion
 Plug 'easymotion/vim-easymotion'
 
-" surround.vim
-Plug 'tpope/vim-surround'
+" surround.vim (:help surround) & repeat.vim
+Plug 'tpope/vim-surround'   " e.g. ysiw( wrap word with (), yss( wrap line with ()
+Plug 'tpope/vim-repeat'     " . command will work with ds, cs, and ys with repeat.vim
 
 " tcomment
 Plug 'tomtom/tcomment_vim'
+
+" matchit
+Plug 'matchit.zip'
+
+" MRU (:MRU)
+Plug 'yegappan/mru'
+
+" FuzzyFinder (:help FuzzyFinder, :FufFile)
+Plug 'L9'           " Vim-script library, required for FuzzyFinder
+Plug 'FuzzyFinder'  " mirror at https://github.com/vim-scripts/FuzzyFinder
 
 " Using a tagged release; wildcard allowed (requires git 1.9.2 or above)
 Plug 'fatih/vim-go' ", { 'tag': '*' }
