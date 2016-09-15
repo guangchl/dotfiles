@@ -5,6 +5,14 @@
 >Color can be downloaded at [iTerm Themes] or their [Git Repo]
 ### The colors I like
  - Ciapre
+ - Seti
+ - Shaman
+ - Slate
+ - Smyck
+ - SoftServer
+ - Solarized Dark
+ - Solarized Dark - Patched
+ - Solarized Dark Higher Contrast
  - SpaceGray
  - SpaceGray Eighties
  - SpaceGray Eighties Dull
