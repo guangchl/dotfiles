@@ -111,3 +111,26 @@ alias uuuuuuuuuuuuuuu='cd ../../../../../../../../../../../../../../..'
 # tools
 alias tmux='tmux -u'
 alias vi='vim'
+
+# trash bin
+# mkdir -p ~/.trash
+# alias rm=trash
+# alias rml='ls -la ~/.trash'
+# alias rmu=trashrestore
+# alias rmc=trashclear
+# trash()
+# {
+#     mv $@ ~/.trash/
+# }
+# trashrestore()
+# {
+#     mv -i ~/.trash/$@ ./
+# }
+# tashclear()
+# {
+#     read -p "clear sure?[n]" confirm
+#     [$confirm == 'y'] || [$confirm == 'Y'] && rm -rf ~/.trash/*
+# }
+
+# Dev shortcuts
+# Something for work
