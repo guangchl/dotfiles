@@ -86,7 +86,7 @@ set statusline+=%4*\ %{&ff}\                               "FileFormat (dos/unix
 set statusline+=%5*\ %{&spelllang}\ %{HighlightSearch()}\  "Spellanguage & Highlight on?
 set statusline+=%6*\ %=\ row:%l/%L\ (%p%%)\                "Rownumber/total (%)
 set statusline+=%7*\ col:%c\                               "Colnr
-set statusline+=%8*\ \ %r%w\ %P\ \                         "Modified? Readonly? Top/bot.
+set statusline+=%8*\ \ %r%w\ %P\                           "Modified? Readonly? Top/bot.
 " functions
 function! HighlightSearch()
   if &hls
