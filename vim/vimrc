@@ -37,12 +37,13 @@ ab #d #define
 ab #i #include
 
 
-""" Converting tabs to spaces
+""" Indentation setting
 set tabstop=4 shiftwidth=4 expandtab  " oneliner as the 3 lines below
 "set expandtab     " insert space characters whenever the tab key is pressed
 "set tabstop=4     " set number of space when typing tab
 "set shiftwidth=4  " change the number of space characters inserted for indentation
 "retab             " change all the existing tab characters to match the current tab settings
+set paste          " pasting text unmodified from other applications, no auto indent
 
 
 """ Start vim in utf-8 encoding mode
