@@ -1,5 +1,12 @@
 # My VIM Note & Cheat Sheet
->There are 3 modes, command mode, insert mode and visual mode. Most the time, be in command mode.
+>VIM is all about saving key strokes, making maximum amount of effect with
+>minimum amount of work.
+>There is another type of people lives by a fancy belief called emacs, where
+>version of its kernel is irrelevant and where everyone knows Linux is the
+>favorite kid though. Peaceful respect from us ordinary VIM people, way out of
+>our league.
+
+**There are 3 modes, command mode, insert mode and visual mode. Most the time, be in command mode.**
 
 ## Basic
     * :help/<F1>      help
