@@ -131,6 +131,7 @@
     * r           replace character under cursor
     * R           replace multiple characters from cursor, press <ESC> to exit replace mode
     * p           paste copied text after cursor
+    * ==          auto-indent current line
 
 ## Split buffer
     * :vs [file]      vertically split
