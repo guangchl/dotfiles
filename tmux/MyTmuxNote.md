@@ -5,13 +5,10 @@
 ## Basic
     * tmux                           start new session
     * tmux new -s <name>             start new session with name
-    * tmux a/at/attach               attach
-    * tmux a -t <name>               attach to a named session
     * tmux ls                        list sessions
     * tmux kill-session -t <name>    kill session
     * tmux ls | grep : | cut -d. -f1 | awk '{print substr($1, 0, length($1)-1)}' | xargs kill  kill all sessions
     * PREFIX ?                       list key binding shortcuts
-    * PREFIX d                       detach
     * PREFIX t                       big clock
     * PREFIX :                       prompt
     * PREFIX :source-file <filename> Reload the tmux config file
@@ -19,26 +16,30 @@
     * PREFIX [       enter copy mode
     * PREFIX ]       paste
     * PREFIX =       list all paste buffers and choose one to paste from
-## Pane
-    * PREFIX x       kill the current pane
-    * PREFIX o       switch to other pane
-    * PREFIX !       close all other panes
-    * PREFIX q       show numerical values of panes
-    * PREFIX space   re-arrange current panes within the same window with different layouts
+## Session
+    * tmux a/at/attach                             attach
+    * tmux a -t <name>                             attach to a named session
+    * PREFIX s                                     list all sessions to choose
+    * tmux ls/list-sessions                        list all sessions
+    * PREFIX d                                     Detach from the current session
+    * PREFIX D                                     Select a session to detach from
+    * PREFIX (                                     Move to previous session
+    * PREFIX )                                     Move to next session
+    * PREFIX $                                     renmae the session
+    * PREFIX :rename-session [-t name] [new-name]  rename a session, if name is not specified, rename the current one
+    * tmux rename-session [-t name] [new-name]     rename a session, if name is not speicfied, rename the most recently used session
 ## Window
     * PREFIX w       list all windows
     * PREFIX n       go to next window
     * PREFIX p       go to previous window
     * PREFIX l       go to last active window
     * PREFIX c       create another window
-## Session
-    * PREFIX s                                      list all sessions to choose
-    * tmux ls/list-sessions                         list all sessions
-    * PREFIX (                                      Move to previous session
-    * PREFIX )                                      Move to next session
-    * PREFIX $                                      renmae the session
-    * PREFIX :rename-session [-t name] [new-name]   rename a session, if name is not specified, rename the current one
-    * tmux rename-session [-t name] [new-name]      rename a session, if name is not speicfied, rename the most recently used session
+## Pane
+    * PREFIX x       kill the current pane
+    * PREFIX o       switch to other pane
+    * PREFIX !       close all other panes
+    * PREFIX q       show numerical values of panes
+    * PREFIX space   re-arrange current panes within the same window with different layouts
 ## Resize Pane
     * PREFIX :resize-pane -D (Resizes the current pane down)
     * PREFIX :resize-pane -U (Resizes the current pane upward)
