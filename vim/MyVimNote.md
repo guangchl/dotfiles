@@ -156,6 +156,9 @@
     * :set tw/textwidth=80    set the text width for automatic word wrapping
     * :set tw=0               stop automatic wrapping, unset textwidth
 
+## Cool Tricks
+    * :%!python -m json.tool  use python json.tool module to format JSON file
+
 Tip: I use [DILLINGER] both to create the initial version of this markdown file, and to modify this file sometimes afterwards.
 
 [//]: # (Reference links used in the body of this note, which were stripped out by markdown processor. All comments won't be seen after rendering. SO post for comments in markdown - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax)
