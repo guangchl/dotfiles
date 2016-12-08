@@ -1,4 +1,4 @@
-# My VIM Note & Cheat Sheet
+# My VIM Cheat Sheet
 >VIM is all about saving key strokes, making maximum amount of effect with
 >minimum amount of work.
 >There is another type of people lives by a fancy belief called emacs, where
