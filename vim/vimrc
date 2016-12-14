@@ -98,6 +98,25 @@ function! HighlightSearch()
 endfunction
 
 
+""" Jump list selection
+" define function (! means redefine if exists)
+function! GotoJump()
+  jumps
+  let j = input("Where are you heading? Well, I am heading: ")
+  if j != ''
+    let pattern = '\v\c^\+'
+    if j =~ pattern
+      let j = substitute(j, pattern, '', 'g')
+      execute "normal " . j . "\<c-i>"
+    else
+      execute "normal " . j . "\<c-o>"
+    endif
+  endif
+endfunction
+" create the command (! means redefine if exists)
+command! Jump call GotoJump()
+
+
 """ vim-plug (from example on page https://github.com/junegunn/vim-plug) 
 call plug#begin('~/.vim/plugged')
 
@@ -145,6 +164,8 @@ Plug 'FuzzyFinder'  " mirror at https://github.com/vim-scripts/FuzzyFinder
 Plug 'fatih/vim-go' ", { 'tag': '*' }
 " Plugin options
 " Plug 'nsf/gocode' ", { 'tag': 'v.20150303', 'rtp': 'vim' } # used by vim-go
+" Plug 'Valloric/YouCompleteMe'
+
 " vim-scala (:help scala)
 Plug 'derekwyatt/vim-scala'
 
