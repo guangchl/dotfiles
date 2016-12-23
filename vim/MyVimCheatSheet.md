@@ -70,6 +70,9 @@
         * zz        move current line to the middle of the screen
         * zt        move current line to the top of the screen
         * zb        move current line to the bottom of the screen
+        * H         move cursor to top of screen
+        * M         move cursor to middle of screen
+        * L         move cursor to bottom of screen
 
 ## Search
     * *    search the word under the cursor
