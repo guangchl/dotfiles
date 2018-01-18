@@ -30,10 +30,12 @@
     * tmux rename-session [-t name] [new-name]     rename a session, if name is not speicfied, rename the most recently used session
 ## Window
     * PREFIX w       list all windows
+    * PREFIX 2       go to window 2
     * PREFIX n       go to next window
     * PREFIX p       go to previous window
     * PREFIX l       go to last active window
     * PREFIX c       create another window
+    * PREFIX ,       rename current window
 ## Pane
     * PREFIX x       kill the current pane
     * PREFIX o       switch to other pane
