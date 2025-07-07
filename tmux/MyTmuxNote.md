@@ -37,11 +37,15 @@
     * PREFIX c       create another window
     * PREFIX ,       rename current window
 ## Pane
+    * PREFIX z       zoom the current pane
+    * PREFIX {       swap the current pane with the one on its left
+    * PREFIX }       swap the current pane with the one on its right
+    * PREFIX ctrl+o  rotate all panes in the same window counter-clockwise
+    * PREFIX space   toggle layouts of the panes within the same window
     * PREFIX x       kill the current pane
     * PREFIX o       switch to other pane
     * PREFIX !       close all other panes
     * PREFIX q       show numerical values of panes
-    * PREFIX space   re-arrange current panes within the same window with different layouts
 ## Resize Pane
     * PREFIX :resize-pane -D (Resizes the current pane down)
     * PREFIX :resize-pane -U (Resizes the current pane upward)
